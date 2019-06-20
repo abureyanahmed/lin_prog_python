@@ -1,0 +1,7 @@
+#https://www.analyticsvidhya.com/blog/2017/02/lintroductory-guide-on-linear-programming-explained-in-simple-english/
+maximize:
+50 X_0 +120 Y_1
+subject to:
+1 X_0 +2 Y_1 <= 100
+1 X_0 +3 Y_1 <= 120
+1 X_0 +1 Y_1 <= 110

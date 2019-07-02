@@ -80,9 +80,10 @@ def convert_min_to_max(c):
 def run_lin_prog(file_name):
   print('Running linear program')
   c, A, b = read_model(file_name)
-  x0_bounds = (0, None)
-  x1_bounds = (0, None)
-  res = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bounds, x1_bounds])
+  bounds = []
+  for i in range(len(c)):
+    bounds.append((0, None))
+  res = linprog(c, A_ub=A, b_ub=b, bounds=bounds)
   print(res)
 
 #run_lin_prog('simple.txt')
